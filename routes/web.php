@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 // public: 9ee6561c62c008cc61690f35b0272b2d8c4736efd7d323d02b64fbebd0753479
 
 Route::get('/', function () {
-    return Movie::search($request->query('search', 'Star Wars'))->get();
+    return Movie::search(request()->query('search', 'Star Wars'))->get();
 });
